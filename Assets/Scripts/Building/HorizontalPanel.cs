@@ -13,11 +13,6 @@ namespace Earthquake.Building
             base.GetRigidbody().AddForce(vector, ForceMode.Impulse);
         }
 
-        /*private void ApplyPushForce()
-        {
-
-        }*/
-
         private void FixedUpdate()
         {
             if (!isApplyedForce)

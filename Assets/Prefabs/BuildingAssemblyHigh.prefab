@@ -122,8 +122,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225820459995118}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -252,8 +252,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225820629057641}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -382,8 +382,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225820783223878}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -512,8 +512,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225820876393423}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -642,8 +642,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225820900807078}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -674,7 +674,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225821540158671}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 435.4, y: 1, z: 216.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -732,6 +732,18 @@ MonoBehaviour:
   - {fileID: 2705225822210255951}
   - {fileID: 2705225820459995107}
   - {fileID: 2705225822396414399}
+  - {fileID: 5848561692180589429}
+  - {fileID: 4576279536027530650}
+  - {fileID: 4576279534663587575}
+  - {fileID: 4576279534913781832}
+  - {fileID: 4576279535002926266}
+  - {fileID: 4576279536288213249}
+  - {fileID: 4576279535829651246}
+  - {fileID: 4576279535435222730}
+  - {fileID: 4576279534321666020}
+  - {fileID: 4576279535045649385}
+  - {fileID: 4576279536067846371}
+  - {fileID: 4576279536042064901}
 --- !u!1 &2705225822210255946
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,8 +866,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225822210255946}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -984,8 +996,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225822355062307}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1114,8 +1126,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225822396414394}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1244,8 +1256,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225822470830788}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1374,8 +1386,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225822474435264}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1504,8 +1516,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2705225822509781723}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1634,8 +1646,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279534321666023}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1764,8 +1776,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279534663587530}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -1894,8 +1906,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279534913781835}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2024,8 +2036,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279535002926269}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2154,8 +2166,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279535045649388}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2284,8 +2296,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279535435222733}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2414,8 +2426,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279535829651233}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2544,8 +2556,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279536027530653}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2674,8 +2686,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279536042064920}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2804,8 +2816,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279536067846374}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2934,8 +2946,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4576279536288213252}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 50
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -2952,6 +2964,10 @@ PrefabInstance:
     - target: {fileID: 7973753032484005426, guid: 9ed333b788359b744bd6f72ec3797154, type: 3}
       propertyPath: m_Name
       value: BuildingHorizontalPanel (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7973753032484005433, guid: 9ed333b788359b744bd6f72ec3797154, type: 3}
+      propertyPath: m_Mass
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7973753032484005437, guid: 9ed333b788359b744bd6f72ec3797154, type: 3}
       propertyPath: m_RootOrder
@@ -3004,6 +3020,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7973753032484005437, guid: 9ed333b788359b744bd6f72ec3797154, type: 3}
   m_PrefabInstance: {fileID: 4576279535838203213}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5848561692180589429 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7973753032484005432, guid: 9ed333b788359b744bd6f72ec3797154, type: 3}
+  m_PrefabInstance: {fileID: 4576279535838203213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: decf832fdc2536444884d9a655615a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5414050984577003918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3014,6 +3041,10 @@ PrefabInstance:
     - target: {fileID: 7973753032484005426, guid: 9ed333b788359b744bd6f72ec3797154, type: 3}
       propertyPath: m_Name
       value: BuildingHorizontalPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7973753032484005433, guid: 9ed333b788359b744bd6f72ec3797154, type: 3}
+      propertyPath: m_Mass
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7973753032484005437, guid: 9ed333b788359b744bd6f72ec3797154, type: 3}
       propertyPath: m_RootOrder

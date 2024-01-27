@@ -23,36 +23,52 @@ namespace Earthquake.Grounded
 
         void OnEnable()
         {
-            InitNewVer();
+            //TODO: complete new version first
+            //InitNewVer();
         }
 
-        public void ApplyPushForce(EarthQuakeType quakeType)
+        public void ApplyRegularPushForce(float pushValue, Vector3 vector, Vector3 groudMoveDelta, float slowdownFactor)
         {
-            StopCurrentForce();
-        }
-
-        public void ApplyPushForce(float pushValue, Vector3 vector, Vector3 groudMoveDelta, float slowdownFactor)
-        {
-            //Move assembly with terrain
-            //TODO: move via position?
-            transform.position += groudMoveDelta;
+            // transform.position += groudMoveDelta;
             vector = vector * pushValue;
             for (int i = 0; i < m_BuildingComponents.Length; i++)
             {
                 m_BuildingComponents[i].ApplyPushForce(pushValue, vector);
                 pushValue -= slowdownFactor;
             }
-            //ApplyPushForceNewVer();
+        }
+
+        public void ApplyRegularPushAdvancedForce(float pushValue, Vector3 vector, Vector3 groudMoveDelta, float slowdownFactor)
+        {
+            // transform.position += groudMoveDelta;
+            vector = vector * pushValue * 0.05f;
+            for (int i = 0; i < m_BuildingComponents.Length; i++)
+            {
+                m_BuildingComponents[i].ApplyPushForce(pushValue, vector);
+                pushValue -= slowdownFactor;
+            }
+        }
+
+        public void ApplyPushForce(bool useAdvanced, PushData pushData)
+        {
+            if (!useAdvanced)
+            {
+                ApplyRegularPushForce(pushData.PushStrange, pushData.PushVector, pushData.TerraindPositionDelta, pushData.SlowdownFactor);
+            }
+            else
+            {
+                ApplyRegularPushAdvancedForce(pushData.PushStrange, pushData.PushVector, pushData.TerraindPositionDelta, pushData.SlowdownFactor);
+                //TODO: require warkaround
+                //ApplyPushForceNewVer(pushData.PushStrange, pushData.PushVector, pushData.TerraindPositionDelta, pushData.SlowdownFactor);
+            }
         }
 
         private void InitNewVer()
         {
-            //Initialize the arrays
             posNew = new Vector3[m_BuildingComponents.Length];
             posOld = new Vector3[m_BuildingComponents.Length];
             velArray = new Vector3[m_BuildingComponents.Length];
 
-            //Add init values to the arrays
             for (int i = 0; i < posNew.Length; i++)
             {
                 posNew[i] = Vector3.zero;
@@ -64,56 +80,40 @@ namespace Earthquake.Grounded
             c = k / 10f;
         }
 
-        private void ApplyPushForceNewVer()
+        private void ApplyPushForceNewVer(float pushValue, Vector3 vector, Vector3 groudMoveDelta, float slowdownFactor)
         {
-            //Time.deltatime might give an unstable result because we are using Euler forward
+            m_BuildingContainer.transform.position = groudMoveDelta;
             float h = 0.02f;
 
-            //Iterate through the floors to calculate the new position and velocity
             for (int i = 0; i < m_BuildingComponents.Length; i++)
             {
                 Vector3 oldPosVec = posOld[i];
 
-                //
-                //Calculate the floor's acceleration
-                //
                 Vector3 accVec = Vector3.zero;
 
-                //First floor
                 if (i == 0)
                 {
-                    accVec = (-k * (oldPosVec - transform.position) + k * (posOld[i + 1] - oldPosVec)) / m;
+                    accVec = (-k * (oldPosVec - m_BuildingContainer.transform.position) + k * (posOld[i + 1] - oldPosVec)) / m;
                 }
-                //Last floor
                 else if (i == m_BuildingComponents.Length - 1)
                 {
-                    //m = 500f; //If the last floor is smaller
                     accVec = (-k * (oldPosVec - posOld[i - 1])) / m;
                 }
-                //Middle floors
                 else
                 {
                     accVec = (-k * (oldPosVec - posOld[i - 1]) + k * (posOld[i + 1] - oldPosVec)) / m;
                 }
 
-                //Add damping to the final acceleration
                 accVec -= (c * velArray[i]) / m;
 
 
-                //
-                //Euler forward
-                //
-                //Add the new position
                 posNew[i] = oldPosVec + h * velArray[i];
-                //Add the new velocity
                 velArray[i] = velArray[i] + h * accVec;
             }
 
 
-            //Add the new coordinates to the floors
             for (int i = 0; i < m_BuildingComponents.Length; i++)
             {
-                //Assume no spring-like behavior in y direction
                 Vector3 newPos = new Vector3(
                     posNew[i].x,
                     m_BuildingComponents[i].GetObject().transform.position.y,
@@ -121,7 +121,6 @@ namespace Earthquake.Grounded
 
                 m_BuildingComponents[i].GetObject().transform.position = newPos;
 
-                //Transfer the values from this update to the next
                 posOld[i] = posNew[i];
             }
         }

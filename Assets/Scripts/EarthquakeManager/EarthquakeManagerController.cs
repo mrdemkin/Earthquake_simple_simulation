@@ -4,6 +4,7 @@ using SimpleCGames.GDebug;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Earthquake.Main
 {
@@ -44,6 +45,9 @@ namespace Earthquake.Main
 
             m_View.ChangeSimulationType.RemoveAllListeners();
             m_View.ChangeSimulationType.AddListener(ChangeSimulationType);
+
+            m_View.ResetSimulateRequest.RemoveAllListeners();
+            m_View.ResetSimulateRequest.AddListener(ResetSimulation);
         }
 
         private void StartSimulate()
@@ -56,12 +60,19 @@ namespace Earthquake.Main
 
         private void StoptSimulate()
         {
+            m_Controller.StopSimulation();
             m_View.UnblockUi();
         }
 
         private void ChangeSimulationType()
         {
             useAdvancedSimulationType = !useAdvancedSimulationType;
+        }
+
+        private void ResetSimulation()
+        {
+            GLogger.Instance.Log($"ResetSimulation");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         private void OnSelectQuakeType(short type)
@@ -95,6 +106,7 @@ namespace Earthquake.Main
             m_View.StartSimulateRequest.RemoveAllListeners();
             m_View.StopSimulateRequest.RemoveAllListeners();
             m_View.SelectQuakeType.RemoveAllListeners();
+            m_View.ResetSimulateRequest.RemoveAllListeners();
         }
     }
 }
